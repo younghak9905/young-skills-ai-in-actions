@@ -1,11 +1,9 @@
 name: Ask AI
-
 on:
   workflow_dispatch:
 
 permissions:
   models: read
-
 jobs:
   ask-ai:
     runs-on: ubuntu-latest
@@ -23,4 +21,4 @@ jobs:
         run: |
           echo "## 🤖 AI Response" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "${{ steps.ai-response.outputs.response }}" >>
+          echo "${{ steps.ai-response.outputs.response }}" >> $GITHUB_STEP_SUMMARY
